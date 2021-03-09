@@ -1,0 +1,22 @@
+#authForm {
+    width: 400px;
+    margin: 0 auto 0 auto;
+    padding: 30px;
+    color: white;
+}
+
+.btnContainer {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+.accountSubmit {
+    width: 100%;
+}
+
+.loginSuccess {
+    text-align: center;
+    margin: 0 auto 0 auto;
+    width: 25%;
+}
