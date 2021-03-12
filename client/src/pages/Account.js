@@ -47,6 +47,7 @@ function Account() {
         fire
             .auth()
             .createUserWithEmailAndPassword(email, password)
+            .then("You signed up successfully!")
             .catch(err => {
                 switch(err.code){
                     case "auth/email-already-in-use":
@@ -59,8 +60,8 @@ function Account() {
                 }
             });
 
-        clearInputs();
-        clearErrors();
+        // clearInputs();
+        // clearErrors();
     }
 
 

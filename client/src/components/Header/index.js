@@ -19,15 +19,14 @@ function Header() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto"> </Nav>
-                <Nav>
-                    <Nav.Link href="/account">Log In</Nav.Link>
-                </Nav>
+
 
                 { currentUser ? (
-                    <button onClick={handleLogout}> Logout </button>
+                    <Nav onClick={handleLogout}> Logout </Nav>
                 ) : (
-                    <>
-                    </>
+                    <Nav>
+                        <Nav.Link href="/account">Log In</Nav.Link>
+                    </Nav>
                 )}
                 
             </Navbar.Collapse>
