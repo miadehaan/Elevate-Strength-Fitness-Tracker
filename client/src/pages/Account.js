@@ -28,7 +28,7 @@ function Account() {
         fire.auth().signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 // var user = userCredential.user;
-                alert("You're now logged in!");
+                // alert("You're now logged in!");
             })
             .catch((error) => {
                 //error

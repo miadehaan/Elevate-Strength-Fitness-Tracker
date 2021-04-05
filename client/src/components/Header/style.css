@@ -2,9 +2,10 @@
     font-size: 30px;
 }
 
-.navbar-nav {
+.navbar-nav, #displayName {
     color: white;
     text-align: right;
+    font-size: 18px;
 }
 
 /* When mobile menu is out: 992px and smaller */
@@ -15,6 +16,9 @@
     .navbar-nav {
         padding-right: 0;
     }
+    #appLogo {
+        width: 30%;
+    }
 }
 
 /* Desktop size: 992px & larger */
@@ -24,5 +28,8 @@
     }
     .navbar-nav {
         padding-right: 150px;
+    }
+    #appLogo {
+        width: 50%;
     }
 }

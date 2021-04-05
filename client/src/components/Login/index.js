@@ -32,11 +32,11 @@ function Login(props) {
 
     return (
         <section>
-            <h1 style={{ color: 'white', textAlign: 'center', marginTop: "100px" }}> 
+            <h1 style={{ color: 'white', textAlign: 'center', marginTop: "60px", marginBottom: "80px", textShadow: '3px 3px 4px black' }}> 
                 Log In 
             </h1>
 
-            <Form id="authForm">
+            <Form id="authForm" className="loginContainer">
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label className="formLabel">Email address</Form.Label>
                     <Form.Control 
@@ -69,8 +69,8 @@ function Login(props) {
                     <Button className="accountSubmit" variant="primary" type="submit" onClick={handleLogin}>
                         Log In
                     </Button>
-                    <p> Don't have an account? 
-                        <span id="signUpBtn" style={{ color: 'yellow'}} 
+                    <p style={{ color: 'black', paddingTop: '10px' }}> Don't have an account? 
+                        <span id="signUpBtn" 
                             onClick={() => 
                                 {
                                     setHasAccount(!hasAccount);

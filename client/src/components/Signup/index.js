@@ -25,11 +25,11 @@ function Signup(props) {
     return (
         <section>
 
-            <h1 style={{ color: 'white', textAlign: 'center', marginTop: "100px" }}> 
+            <h1 style={{ color: 'white', textAlign: 'center', marginTop: "60px", marginBottom: "80px", textShadow: '3px 3px 4px black' }}> 
                 Sign Up 
             </h1>
 
-            <Form id="authForm">
+            <Form id="authForm" className="signupContainer">
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label className="formLabel">Email address</Form.Label>
                     <Form.Control 
@@ -62,8 +62,8 @@ function Signup(props) {
                     <Button className="accountSubmit" variant="primary" type="submit" onClick={handleSignup} >
                         Create Account
                     </Button>
-                    <p> Already have an account? 
-                        <span id="loginBtn" style={{ color: 'yellow'}} 
+                    <p style={{ color: 'black', paddingTop: '10px' }}> Already have an account? 
+                        <span id="loginBtn"
                             onClick={() => 
                                 {
                                     setHasAccount(!hasAccount);
