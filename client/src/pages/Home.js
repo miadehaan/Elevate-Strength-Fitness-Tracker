@@ -29,39 +29,35 @@ function Home() {
 
     return (
         <div>
-            <h2 style={{ color: "white", textAlign: "center", margin: '50px', paddingTop: "50px" }}>Workout Dashboard</h2>
+            <h1 style={{ color: "white", textAlign: "center", margin: '50px', paddingTop: "50px" }}>Workout Dashboard</h1>
 
             {/* If logged in, display summary of workouts, etc. */}
             {/* If not logged in, show Log In page */}
-            {/* { currentUser ? (
+            { currentUser ? (
                 <>
-                    <h1 style={{ color: 'white', textAlign: 'center', marginTop: "100px" }}> Home Page... </h1>
-                    <Summary />
+                    <section style={{ textAlign: "center", margin: '30px' }}>
+                        <span style={{margin: '10px'}} onClick={() => handleDisplay("daily")} > 
+                            <button style={{ color: "white", hover: "", background: "none", border: "none"}}>Daily</button>
+                        </span>
+                        <span style={{margin: '10px'}} onClick={() => handleDisplay("weekly")}> 
+                            <button style={{ color: "white", hover: "", background: "none", border: "none"}}>Weekly</button>
+                        </span>
+                        <span style={{margin: '10px'}} onClick={() => handleDisplay("summary")}>
+                            <button style={{ color: "white", hover: "", background: "none", border: "none"}}>Summary</button>
+                        </span>
+                    </section>
+
+                    <hr style={{ backgroundColor: "white", textAlign: "center", margin: '30px' }} />
+
+                    <section >
+                        {/* Render based on 'display' state */}
+                        {handleRender()}
+                    </section>
                 </>
             ) : (
                 // redirect to Account route/page
                 <Redirect to="/account" />
-            )}  */}
-
-            <section style={{ textAlign: "center", margin: '30px' }}>
-                <span style={{margin: '10px'}} onClick={() => handleDisplay("daily")} > 
-                    <button style={{ color: "white", hover: "", background: "none", border: "none"}}>Daily</button>
-                </span>
-                <span style={{margin: '10px'}} onClick={() => handleDisplay("weekly")}> 
-                    <button style={{ color: "white", hover: "", background: "none", border: "none"}}>Weekly</button>
-                </span>
-                <span style={{margin: '10px'}} onClick={() => handleDisplay("summary")}>
-                    <button style={{ color: "white", hover: "", background: "none", border: "none"}}>Summary</button>
-                </span>
-            </section>
-
-            <hr style={{ backgroundColor: "white", textAlign: "center", margin: '30px' }} />
-
-            <section >
-                {/* Render based on 'display' state */}
-                {handleRender()}
-            </section>
-
+            )} 
 
         </div>
         

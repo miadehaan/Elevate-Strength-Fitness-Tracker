@@ -1,0 +1,28 @@
+.navbar-brand {
+    font-size: 30px;
+}
+
+.navbar-nav {
+    color: white;
+    text-align: right;
+}
+
+/* When mobile menu is out: 992px and smaller */
+@media only screen and (max-width: 992px) {
+    .navbar-brand {
+        padding-left: 0;
+    }
+    .navbar-nav {
+        padding-right: 0;
+    }
+}
+
+/* Desktop size: 992px & larger */
+@media only screen and (min-width: 993px) {
+    .navbar-brand {
+        padding-left: 150px;
+    }
+    .navbar-nav {
+        padding-right: 150px;
+    }
+}

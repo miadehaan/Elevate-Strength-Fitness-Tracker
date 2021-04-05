@@ -25,43 +25,40 @@ function Account() {
 
 
     const handleLogin = () => {
-        fire
-            .auth()
-            .signInWithEmailAndPassword(email, password)
-            .catch(err => {
-                switch(err.code){
-                    case "auth/invalid-email":
-                    case "auth/user-disabled":
-                    case "auth/user-not-found":
-                        setEmailError(err.message);
-                        break;
-                    case "auth/wrong-password":
-                        setPasswordError(err.message);
-                        break;
-                }
+        fire.auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                // var user = userCredential.user;
+                alert("You're now logged in!");
+            })
+            .catch((error) => {
+                //error
+                // var errorCode = error.code;
+                var errorMessage = error.message;
+
+                alert("Error: " + errorMessage);
             });
 
+        clearInputs();
+        clearErrors();
     }
 
     const handleSignup = () => {
-        fire
-            .auth()
-            .createUserWithEmailAndPassword(email, password)
-            .then("You signed up successfully!")
-            .catch(err => {
-                switch(err.code){
-                    case "auth/email-already-in-use":
-                    case "auth/invalid-email":
-                        setEmailError(err.message);
-                        break;
-                    case "auth/weak-password":
-                        setPasswordError(err.message);
-                        break;
-                }
+        fire.auth().createUserWithEmailAndPassword(email, password)
+            .then( (userCredential) => {
+                // Signed in 
+                // var user = userCredential.user;
+                console.log("You successfully created an account!");
+                alert("You successfully created an account!");
+            })
+            .catch((error) => {
+                // var errorCode = error.code;
+                var errorMessage = error.message;
+
+                alert("Error: " + errorMessage);
             });
 
-        // clearInputs();
-        // clearErrors();
+        clearInputs();
+        clearErrors();
     }
 
 
@@ -97,11 +94,7 @@ function Account() {
                     clearErrors={clearErrors}
                 />
             )}
-            
-
-
         </div>
-        
     );
 }
 

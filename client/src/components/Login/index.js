@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {Form, Button, Alert } from 'react-bootstrap';
 import "./style.css";
 import {AuthContext} from "../../utils/Auth.js"; 
+import { Redirect } from "react-router-dom";
 
 function Login(props) {
     // console.log(props);
@@ -69,7 +70,7 @@ function Login(props) {
                         Log In
                     </Button>
                     <p> Don't have an account? 
-                        <span style={{ color: 'yellow'}} 
+                        <span id="signUpBtn" style={{ color: 'yellow'}} 
                             onClick={() => 
                                 {
                                     setHasAccount(!hasAccount);
@@ -83,9 +84,13 @@ function Login(props) {
             </Form>
 
             { currentUser ? (
-                <Alert variant={'success'} className="loginSuccess">
-                    You're now logged in!
-                </Alert>
+                <>
+                    <Alert variant={'success'} className="loginSuccess">
+                        You're now logged in!
+                    </Alert>
+
+                    <Redirect to="/" />
+                </>
             ) : (
                 <>
                 </>

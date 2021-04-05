@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Form, Button } from 'react-bootstrap';
 import "./style.css";
+import {AuthContext} from "../../utils/Auth.js"; 
+import { Redirect } from "react-router-dom";
 
 function Signup(props) {
     // console.log(props);
+    const { currentUser } = useContext(AuthContext); // context API if user is logged in
 
     const {
         email, 
@@ -60,17 +63,24 @@ function Signup(props) {
                         Create Account
                     </Button>
                     <p> Already have an account? 
-                    <span style={{ color: 'yellow'}} 
-                        onClick={() => 
-                            {
-                                setHasAccount(!hasAccount);
-                                clearInputs("");
-                                clearErrors("");
-                            }
-                        } > Log  In </span>
+                        <span id="loginBtn" style={{ color: 'yellow'}} 
+                            onClick={() => 
+                                {
+                                    setHasAccount(!hasAccount);
+                                    clearInputs("");
+                                    clearErrors("");
+                                }
+                        } > Log In </span>
                     </p>
                 </div>
             </Form>
+
+            { currentUser ? (
+                <Redirect to="/" />
+            ) : (
+                <>
+                </>
+            ) }
 
         </section>
         

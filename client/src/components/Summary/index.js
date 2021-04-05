@@ -1,11 +1,12 @@
 import React from 'react';
 import Graphs from "../Graphs";
+import "./style.css";
 
 function Summary() {
 
     return (
         <div>
-            <h1 style={{ color: 'white', textAlign: 'center', marginTop: "100px" }}> Summary </h1>
+            <h2 id="summaryHeader"> Summary </h2>
             <Graphs />
         </div>
         

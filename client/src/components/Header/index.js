@@ -22,7 +22,9 @@ function Header() {
 
 
                 { currentUser ? (
-                    <Nav onClick={handleLogout}> Logout </Nav>
+                    <Nav onClick={handleLogout}> 
+                        <Nav.Link >Logout</Nav.Link>
+                    </Nav>
                 ) : (
                     <Nav>
                         <Nav.Link href="/account">Log In</Nav.Link>

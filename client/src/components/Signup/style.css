@@ -14,3 +14,9 @@
 .accountSubmit {
     width: 100%;
 }
+
+#loginBtn {
+    background: none;
+    border: none;
+    color: yellow;
+}

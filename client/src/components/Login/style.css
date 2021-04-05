@@ -20,3 +20,9 @@
     margin: 0 auto 0 auto;
     width: 25%;
 }
+
+#signUpBtn {
+    background: none;
+    border: none;
+    color: yellow;
+}
