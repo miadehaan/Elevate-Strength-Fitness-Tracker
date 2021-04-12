@@ -3,3 +3,8 @@
     text-align: center;
     padding: 20px;
 }
+
+.dayCard {
+    width: 450px;
+    margin: 20px auto 20px auto;
+}

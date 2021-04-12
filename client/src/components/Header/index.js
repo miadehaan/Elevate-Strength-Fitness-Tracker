@@ -8,8 +8,6 @@ import logo from "../../images/fitness_logo.png";
 function Header() {
 
     const { currentUser } = useContext(AuthContext); // context API if user is logged in
-    const username = currentUser.email.substring(0, currentUser.email.lastIndexOf("@"));
-    console.log(username);
 
     // If the user is logged in, show a logout button
     const handleLogout = () => {
@@ -29,7 +27,7 @@ function Header() {
                 { currentUser ? (
                     <>
                         <div id="displayName">
-                            Welcome, { username }!
+                            Welcome, { currentUser.email.substring(0, currentUser.email.lastIndexOf("@")) }!
                         </div>
 
 

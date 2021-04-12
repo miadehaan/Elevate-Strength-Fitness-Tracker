@@ -29,7 +29,7 @@ function Home() {
 
     return (
         <div>
-            <h1 style={{ color: "white", textAlign: "center", margin: '50px', paddingTop: "20px", textShadow: '3px 3px 4px black' }}>Workout Dashboard</h1>
+            <h1 style={{ color: "white", textAlign: "center", margin: '50px', paddingTop: '100px', textShadow: '3px 3px 4px black' }}>Workout Dashboard</h1>
 
             {/* If logged in, display summary of workouts, etc. */}
             {/* If not logged in, show Log In page */}

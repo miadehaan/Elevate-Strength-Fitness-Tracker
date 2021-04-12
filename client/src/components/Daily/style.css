@@ -3,3 +3,31 @@
     text-align: center;
     padding: 20px;
 }
+
+.dailyDate {
+    text-align: center;
+    color: white;
+}
+
+table, th, td {
+    color: black;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+table {
+    margin: 100px auto 10px auto;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+}
+
+.addNewBtn {
+    text-align: right;
+}
